@@ -92,8 +92,10 @@ class NewContact : AppCompatActivity() {
                         ContactApplication.contacts[ContactApplication.id].email=emailc.text.toString()
                         ContactApplication.contacts[ContactApplication.id].image=contactI
                         Toast.makeText(this@NewContact, "Contacto ha sido editado. ", Toast.LENGTH_SHORT).show();
+
                     }
                 }
+            ContactApplication.editContact=false;
             goBack2.callOnClick()
 
         }
@@ -112,7 +114,7 @@ class NewContact : AppCompatActivity() {
             // Load the selected image into a preview
 
             contactImage.setImageBitmap(selectedImage);
-            Toast.makeText(this@NewContact, "$photoUri. ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this@NewContact, "Imagen cargada con éxito.. ", Toast.LENGTH_SHORT).show();
         }
     }
 
